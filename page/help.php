@@ -15,7 +15,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <meta charset="UTF-8">
       <title>MyPW</title>
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
       <header class="top_header">
@@ -32,24 +32,24 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <table class="table_sidebar">
           <tr>
             <td class="tile tile_main">
-              <a href="page/viewPassword.php">View Passwords</a>
+              <a href="viewPassword.php">View Passwords</a>
               <div class="arrow-right"></div>
             </td>
           </tr>
           <tr>
             <td class="tile tile_main">
-              <a href="page/newPassword.php">New Password</a>
+              <a href="newPassword.php">New Password</a>
               <div class="arrow-right"></div>
             </td>
           </tr>
           <tr>
             <td class="tile tile_main">
-              <a href="page/upgradeAccount.php">Upgrade Account</a>
+              <a href="upgradeAccount.php">Upgrade Account</a>
               <div class="arrow-right"></div>
             </td>
             <td class="tile tile_main">
-              <a href="page/help.php">Help</a>
-              <div class="arrow-right">
+              <a href="help.php">Help</a>
+              <div class="arrow-right active">
             </td>
           </tr>
         </table>
