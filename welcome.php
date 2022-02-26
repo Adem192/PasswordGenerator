@@ -31,24 +31,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       <div class="main_container">
         <table class="table_sidebar">
           <tr>
-            <td class="tile tile_main">
-              <a href="page/viewPassword.php">View Passwords</a>
+            <td class="tile tile_main" onclick="location.replace('viewPassword.php')">
+              <a>View Passwords</a>
               <div class="arrow-right"></div>
             </td>
           </tr>
           <tr>
-            <td class="tile tile_main">
-              <a href="page/newPassword.php">New Password</a>
+            <td class="tile tile_main" onclick="location.replace('newPassword.php')">
+              <a>New Password</a>
               <div class="arrow-right"></div>
             </td>
           </tr>
           <tr>
-            <td class="tile tile_main">
-              <a href="page/upgradeAccount.php">Upgrade Account</a>
+            <td class="tile tile_main" onclick="location.replace('upgradeAccount.php')">
+              <a>Upgrade Account</a>
               <div class="arrow-right"></div>
             </td>
-            <td class="tile tile_main">
-              <a href="page/help.php">Help</a>
+          </tr>
+          <tr>
+            <td class="tile tile_main" onclick="location.replace('help.php')">
+              <a>Help</a>
               <div class="arrow-right">
             </td>
           </tr>
