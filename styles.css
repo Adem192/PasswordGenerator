@@ -50,7 +50,7 @@ b {
     background-color: #d3381a;
   }
 
-  .arrow-right {
+  .arrow-right, .arrow-right-log, .arrow-right-reset {
     position: relative;
     width: 0;
     height: 0;
@@ -64,6 +64,18 @@ b {
 
   .tile:hover .arrow-right {
     background-color: var(--button-hover-color);
+    opacity: 1;
+    right: 0;
+  }
+
+  .tile:hover .arrow-right-log {
+    background-color: #e3482a;
+    opacity: 1;
+    right: 0;
+  }
+
+  .tile:hover .arrow-right-reset {
+    background-color: #e9ed48;
     opacity: 1;
     right: 0;
   }

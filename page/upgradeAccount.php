@@ -58,8 +58,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </table>
         <table class="table_sidebar account_table">
           <tr>
-            <td class="tile tile_pass"><a href="reset-password.php">Reset Password</a></td>
-            <td class="tile tile_log"><a href="logout.php">Logout</a></td>
+            <td class="tile tile_pass" onclick="location.replace('../reset-password.php')">
+              <a>Reset Password</a>
+              <div class="arrow-right-reset"></div>
+            </td>
+            <td class="tile tile_log" onclick="location.replace('../logout.php')">
+              <a>Logout</a>
+              <div class="arrow-right-log"></div>
+            </td>
           </tr>
         </table>
       </aside>
