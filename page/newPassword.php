@@ -70,29 +70,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </table>
       </aside>
       <div class="page_content">
-        <form>
-          <table>
+        <h1 class="title">Generate A New Password</h1>
+        <form class="form-control">
+          <table class="form-control-table">
             <tr>
-              <td>
-                <label for="account">Insert Platform Name</label>
-              </td>
-              <td>
-                <input type="text" name="account"/>
-              </td>
+              <td><label for="account">Insert Platform Name</label></td>
             </tr>
             <tr>
-              <td>
-                <label for="password">Insert Password</label>
-              </td>
-              <td>
-                <input type="text" name="password"/>
-              </td>
+              <td><input type="text" name="account"/></td>
             </tr>
-          </table>          
+            <tr>
+              <td><label for="account">Insert Platform Name</label></td>
+            </tr>
+            <tr>
+              <td><input type="text" name="account"/></td>
+            </tr>
+          </table>
         </form>
       </div>
     </div>
   </body>
+  <footer>
+
+  </footer>
   <script>
     function myFunction(x) {
       x.classList.toggle("change");
