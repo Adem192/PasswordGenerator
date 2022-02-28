@@ -77,22 +77,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <td><label for="account">Insert Platform Name</label></td>
             </tr>
             <tr>
-              <td><input type="text" name="account"/></td>
+              <td><input type="text" name="account" placeholder="Facebook"/></td>
             </tr>
+            <tr class="spacer"></tr>
             <tr>
-              <td><label for="account">Insert Platform Name</label></td>
+              <td><button id="generatePassword" class="submit" type="button">Generate Password</button></td>
             </tr>
+            <tr class="spacer"></tr>
             <tr>
-              <td><input type="text" name="account"/></td>
+              <td><input id="generatedPassword" style="width:30vw; text-align:center;" type="text" name="generatedPassword"/></td>
             </tr>
+            <tr class="spacer"></tr>
+            <tr class="spacer"></tr>
+            <tr class="spacer"></tr>
+            <tr>
+              <td><input class="submit" type="submit" name="submit" value="Save Login"/></td>
+            </tr>
+            <tr class="spacer"></tr>
           </table>
         </form>
       </div>
     </div>
   </body>
   <footer>
-
+    <a class="footer-text">
+      Created by Adem Kanca - 2022
+    </a>
   </footer>
+  <script src="../script.js"/></script>
   <script>
     function myFunction(x) {
       x.classList.toggle("change");

@@ -25,6 +25,23 @@ footer {
   display:none;
 }
 
+.footer-text {
+  color:#F0DCCA;
+  font-size: 18px;
+}
+
+.spacer {
+  height:7vh;
+}
+
+.submit {
+  border-radius: 10px;
+}
+
+.submit:hover{
+  background-color: #DDD;
+}
+
 /* BUTTONS START */
       .tile {
         box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.4);
@@ -195,7 +212,7 @@ footer {
 
       .form-control {
         width:50vw;
-        height:40vw;
+        height:max-content;
         margin-left: auto;
         margin-right: auto;
         background-color: #CDC6A5;
@@ -230,11 +247,15 @@ footer {
           margin-left: 20px;
         }
         footer {
-          display:block;
-          position: sticky;
-          background-color: #333;
-          bottom:0;
-          height:150px;
+          display: block;
+          position:fixed;
+          left:0px;
+          bottom:0px;
+          height:100px;
+          width:100%;
+          background:#666;
+          text-align: center;
+          line-height: 100px;
         }
       }
 
@@ -244,7 +265,6 @@ footer {
         }
         .form-control {
           width:70vw;
-          height:60vw;
           margin-left: auto;
           margin-right: auto;
           background-color: #CDC6A5;
