@@ -70,9 +70,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </table>
       </aside>
       <div class="page_content">
-        <h1 class="title">Generate A New Password</h1>
+        <h2 class="title">Generate A New Password</h2>
         <form class="form-control">
-          <table class="form-control-table">
+          <table class="form-control-table outline">
             <tr>
               <td><label for="account">Insert Platform Name</label></td>
             </tr>
@@ -80,21 +80,54 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               <td><input type="text" name="account" placeholder="Facebook"/></td>
             </tr>
             <tr class="spacer"></tr>
-            <tr>
-              <td><button id="generatePassword" class="submit" type="button">Generate Password</button></td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr>
-              <td><input id="generatedPassword" style="width:30vw; text-align:center;" type="text" name="generatedPassword"/></td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class="spacer"></tr>
-            <tr class="spacer"></tr>
-            <tr>
-              <td><input class="submit" type="submit" name="submit" value="Save Login"/></td>
-            </tr>
-            <tr class="spacer"></tr>
           </table>
+          <br/><br/>
+          <div class="tabs">
+            <button type="button" id="random" class="tab tab-button tab-active" onclick="toggleTab('random')">Random</button>
+            <button type="button" id="word" class="tab tab-button" onclick="toggleTab('word')">Words</button>
+          </div>
+          <div id="tab-random" class="tab-random">
+            <table class="form-control-table">
+              <tr class="spacer"></tr>
+              <tr>
+                <td><button id="generatePassword" class="submit" type="button">Generate Password</button></td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td><input id="generatedPassword" style="width:30vw; text-align:center;" type="text" name="generatedPassword"/></td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td><input class="submit" type="submit" name="submit" value="Save Login"/></td>
+              </tr>
+              <tr class="spacer"></tr>
+            </table>
+          </div>
+          <div id="tab-word" class="tab-word">
+            <div>
+              3 Words
+            </div>
+            <div>
+              4 Words
+            </div>
+            <table class="form-control-table">
+              <tr class="spacer"></tr>
+              <tr>
+                <td><button id="generatePassword" class="submit" type="button">Generate Password</button></td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td><input id="generatedPassword" style="width:30vw; text-align:center;" type="text" name="generatedPassword"/></td>
+              </tr>
+              <tr class="spacer"></tr>
+              <tr class="spacer"></tr>
+              <tr class="spacer"></tr>
+              <tr>
+                <td><input class="submit" type="submit" name="submit" value="Save Login"/></td>
+              </tr>
+              <tr class="spacer"></tr>
+            </table>
+          </div>
         </form>
       </div>
     </div>

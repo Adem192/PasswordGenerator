@@ -19,3 +19,17 @@ function generateRandomString(){
   let randomString = password.join("");
   return randomString;
 }
+
+function toggleTab(tab) {
+  if (tab=="random"){
+    document.getElementById("random").classList.add("tab-active");
+    document.getElementById("tab-random").style.display = "block";
+    document.getElementById("word").classList.remove("tab-active");
+    document.getElementById("tab-word").style.display = "none";
+  } else {
+    document.getElementById("word").classList.add("tab-active");
+    document.getElementById("tab-word").style.display = "block";
+    document.getElementById("random").classList.remove("tab-active");
+    document.getElementById("tab-random").style.display = "none";
+  }
+}
