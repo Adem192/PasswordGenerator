@@ -28,6 +28,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         <div class="bar3"></div>
       </div>
     </header>
+    <div id="mobile-menu">
+      <ul class="mobile-menu-list">
+        <li><a href="./page/viewPassword.php">View Passwords</a></li>
+        <li><a href="./page/newPassword.php">New Password</a></li>
+        <li><a href="./page/upgradeAccount.php">Upgrade Account</a></li>
+        <li><a href="./page/help.php">Help</a></li>
+        <li><a href="./reset-password.php">Reset Password</a></li>
+        <li><a href="./logout.php">Logout</a></li>
+      </ul>
+    </div>
     <div class="main_container">
       <aside class="sidebar_container">
         <table class="table_sidebar">
@@ -74,9 +84,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </div>
     </div>
   </body>
+  <footer>
+    <a class="footer-text">
+      Created by Adem Kanca - 2022
+    </a>
+  </footer>
   <script>
     function myFunction(x) {
       x.classList.toggle("change");
+      var mobileMenu = document.getElementById("mobile-menu");
+      mobileMenu.classList.toggle("visible");
     }
   </script>
 </html>
