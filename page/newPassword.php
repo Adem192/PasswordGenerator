@@ -7,6 +7,29 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: ../login.php");
     exit;
 }
+
+
+  require_once '../../vendor/autoload.php';
+  use ParagonIE\CipherSweet\Backend\FIPSCrypto;
+  use ParagonIE\CipherSweet\BlindIndex;
+  use ParagonIE\CipherSweet\CipherSweet;
+  use ParagonIE\CipherSweet\EncryptedField;
+  use ParagonIE\CipherSweet\Transformation\LastFourDigits;
+  use ParagonIE\CipherSweet\KeyProvider\StringProvider;
+
+  if (isset($_POST['generatedPassword'])){
+    $provider = new StringProvider(
+        // Example key, chosen randomly, hex-encoded:
+        '4e1c44f87b4cdf21808762970b356891db180a9dd9850e7baf2a79ff3ab8a2fc'
+    );
+
+    $engine = new CipherSweet($provider, new FIPSCrypto());
+
+    $ssn = (new EncryptedField($engine, '', ''));
+
+    $cipher = $ssn->prepareForStorage($_POST['generatedPassword']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +104,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
       </aside>
       <div class="page_content">
         <h2 class="title">Generate A New Password</h2>
-        <form class="form-control">
+        <form class="form-control" action="#" method="POST">
           <table class="form-control-table outline">
             <tr>
               <td><label for="account">Insert Platform Name</label></td>
@@ -108,6 +131,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
               </tr>
               <tr class="spacer"></tr>
               <tr>
+              <td style="font-size:10px; width:20px;"><?php isset($cipher)? print_r($cipher[0]) : ''; ?></td>
                 <td><input class="submit" type="submit" name="submit" value="Save Login"/></td>
               </tr>
               <tr class="spacer"></tr>
