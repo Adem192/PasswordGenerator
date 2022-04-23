@@ -173,6 +173,7 @@ footer {
         float: right;
         border-left: 3px solid #6F9283;
         border-bottom: 3px solid #6F9283;
+        z-index: 10;
       }
 
       .mobile-menu-list {
